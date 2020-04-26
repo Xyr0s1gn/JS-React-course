@@ -12,10 +12,10 @@ let appData = {
   savings: false,
 };
 
-let buy1 = prompt('Введите обязательную статью расходов в этом месяце');
-let buy1Price = prompt('Во сколько обойдется ' + 'buy1 ' + '?');
-let buy2 = prompt('Введите обязательную статью расходов в этом месяце');
-let buy2Price = prompt('Во сколько обойдется ' + 'buy2 ' + '?');
+let buy1 = prompt('Введите обязательную статью расходов в этом месяце'),
+  buy1Price = prompt('Во сколько обойдется ' + 'buy1 ' + '?'),
+  buy2 = prompt('Введите обязательную статью расходов в этом месяце'),
+  buy2Price = prompt('Во сколько обойдется ' + 'buy2 ' + '?');
 
 appData.expenses[buy1] = buy1Price;
 appData.expenses[buy2] = buy2Price;
