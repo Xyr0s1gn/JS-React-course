@@ -348,40 +348,98 @@
 // }
 //////////////////////////////////////////////////////////////////////
 
-let fiat = {
-  make: 'Fiat',
-  model: '500',
-  year: 1957,
-  color: 'Medium Blue',
-  passengers: 2,
-  convertible: false,
-  mileage: 88000,
-  started: false,
-  fuel: 0,
-  start: function () {
-    if (this.fuel != 0) {
-      this.started = true;
-    } else {
-      console.log('The car is on empty, fill up before starting!');
-    }
-  },
-  stop: function () {
-    this.started = false;
-  },
-  drive: function () {
-    if (this.started) {
-      if (this.fuel > 0) {
-        console.log(this.make + ' ' + this.model + ' goes zoom zoom!');
-        this.fuel = this.fuel - 1;
-      } else {
-        console.log('Uj oh, out of fuel.');
-        this.stop();
-      }
-    } else {
-      console.log('You need to start the engine first.');
-    }
-  },
-  addFuel: function (amount) {
-    this.fuel = this.fuel + amount;
-  },
-};
+// let fiat = {
+//   make: 'Fiat',
+//   model: '500',
+//   year: 1957,
+//   color: 'Medium Blue',
+//   passengers: 2,
+//   convertible: false,
+//   mileage: 88000,
+//   started: false,
+//   fuel: 0,
+//   start: function () {
+//     if (this.fuel != 0) {
+//       this.started = true;
+//     } else {
+//       console.log('The car is on empty, fill up before starting!');
+//     }
+//   },
+//   stop: function () {
+//     this.started = false;
+//   },
+//   drive: function () {
+//     if (this.started) {
+//       if (this.fuel > 0) {
+//         console.log(this.make + ' ' + this.model + ' goes zoom zoom!');
+//         this.fuel = this.fuel - 1;
+//       } else {
+//         console.log('Uj oh, out of fuel.');
+//         this.stop();
+//       }
+//     } else {
+//       console.log('You need to start the engine first.');
+//     }
+//   },
+//   addFuel: function (amount) {
+//     this.fuel = this.fuel + amount;
+//   },
+// };
+//////////////////////////////////////////////////////////////////////
+// function lieDetectorTest() {
+//   let lies = 0;
+
+//   let stolenDiamond = {};
+//   if (stolenDiamond) {
+//     console.log('You stole the diamond');
+//     lies++;
+//   }
+//   let car = {
+//     keysInPocket: null,
+//   };
+//   if (car.keysInPocket) {
+//     console.log('Uh oh, guess you stole the car!');
+//     lies++;
+//   }
+//   if (car.emptyGasTank) {
+//     console.log('You drove the car after you stole it!');
+//     lies++;
+//   }
+//   let foundYouAtTheCrimeScene = [];
+//   if (foundYouAtTheCrimeScene) {
+//     console.log('A sure sign of guilt');
+//     lies++;
+//   }
+//   if (foundYouAtTheCrimeScene[0]) {
+//     console.log('Caught with a stolen item!');
+//     lies++;
+//   }
+//   let yourName = ' ';
+//   if (yourName) {
+//     console.log('Guess you lied about your name');
+//     lies++;
+//   }
+//   return lies;
+// }
+// let numberOfLies = lieDetectorTest();
+// console.log('You told ' + numberOfLies + ' lies!');
+// if (numberOfLies >= 3) {
+//   console.log('Guilty as charged');
+// }
+//////////////////////////////////////////////////////////////////////
+let emot = 'XOxxOO';
+let hugs = 0;
+let kisses = 0;
+
+emot = emot.trim();
+emot = emot.toUpperCase();
+
+for (let i = 0; i < emot.length; i++) {
+  if (emot.charAt(i) === 'X') {
+    hugs++;
+  } else if (emot.charAt(i) == 'O') {
+    kisses++;
+  }
+}
+console.log(hugs);
+console.log(kisses);
