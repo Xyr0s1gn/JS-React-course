@@ -21,13 +21,13 @@ let view = {
 let model = {
   boardSize: 7,
   numShips: 3,
-  shipLenght: 3,
+  shipLength: 3,
   shipsSunk: 0,
 
   ships: [
-    { locations: ['06', '16', '26'], hits: ['', '', ''] },
-    { locations: ['24', '34', '44'], hits: ['', '', ''] },
-    { locations: ['10', '11', '12'], hits: ['', '', ''] },
+    { locations: [0, 0, 0], hits: ['', '', ''] },
+    { locations: [0, 0, 0], hits: ['', '', ''] },
+    { locations: [0, 0, 0], hits: ['', '', ''] },
   ],
 
   fire: function (guess) {
@@ -52,7 +52,7 @@ let model = {
   },
 
   isSunk: function (ship) {
-    for (let i = 0; i < this.shipLenght; i++) {
+    for (let i = 0; i < this.shipLength; i++) {
       if (ship.hits[i] !== 'hit') {
         return false;
       }
@@ -74,9 +74,9 @@ let model = {
 
     if (direction === 1) {
       row = Math.floor(Math.random() * this.boardSize);
-      col = Math.floor(Math.random() * (this.boardSize - this.shipLenght));
+      col = Math.floor(Math.random() * (this.boardSize - this.shipLength));
     } else {
-      row = Math.floor(Math.random() * (this.boardSize - this.shipLenght));
+      row = Math.floor(Math.random() * (this.boardSize - this.shipLength));
       col = Math.floor(Math.random() * this.boardSize);
     }
     let newShipLocations = [];
@@ -151,6 +151,8 @@ function init() {
   fireButton.onclick = handleFireButton;
   let guessInput = document.getElementById('guessInput');
   guessInput.onkeypress = handleKeyPress;
+
+  model.generateShipLocations();
 }
 function handleFireButton() {
   let guessInput = document.getElementById('guessInput');
