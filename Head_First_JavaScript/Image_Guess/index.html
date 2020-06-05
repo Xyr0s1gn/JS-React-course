@@ -8,22 +8,44 @@
       body {
         margin: 20px;
       }
+      img {
+        margin: 20px;
+      }
     </style>
     <script>
       window.onload = init;
 
       function init() {
-        let image = document.getElementById('zero');
-        image.onclick = showAnswer;
+        let images = document.getElementsByTagName('img');
+        for (let i = 0; i < images.length; i++) {
+          // images[i].onclick = showAnswer;
+          images[i].onmousemove = showAnswer;
+          images[i].onmouseout = reblur;
+        }
       }
 
-      function showAnswer() {
-        let image = document.getElementById('zero');
-        image.src = 'zero.jpg';
+      function showAnswer(eventObj) {
+        let image = eventObj.target;
+
+        let name = image.id;
+        name = name + '.jpg';
+        image.src = name;
+      }
+
+      function reblur(eventObj) {
+        let image = eventObj.target;
+        let name = image.id;
+        name = name + 'blur.jpg';
+        image.src = name;
       }
     </script>
   </head>
   <body>
     <img id="zero" src="zeroblur.jpg" />
+    <img id="one" src="oneblur.jpg" />
+    <img id="two" src="twoblur.jpg" />
+    <img id="three" src="threeblur.jpg" />
+    <img id="four" src="fourblur.jpg" />
+    <img id="five" src="fiveblur.jpg" />
   </body>
 </html>
