@@ -427,19 +427,44 @@
 //   console.log('Guilty as charged');
 // }
 //////////////////////////////////////////////////////////////////////
-let emot = 'XOxxOO';
-let hugs = 0;
-let kisses = 0;
+// let emot = 'XOxxOO';
+// let hugs = 0;
+// let kisses = 0;
 
-emot = emot.trim();
-emot = emot.toUpperCase();
+// emot = emot.trim();
+// emot = emot.toUpperCase();
 
-for (let i = 0; i < emot.length; i++) {
-  if (emot.charAt(i) === 'X') {
-    hugs++;
-  } else if (emot.charAt(i) == 'O') {
-    kisses++;
-  }
-}
-console.log(hugs);
-console.log(kisses);
+// for (let i = 0; i < emot.length; i++) {
+//   if (emot.charAt(i) === 'X') {
+//     hugs++;
+//   } else if (emot.charAt(i) == 'O') {
+//     kisses++;
+//   }
+// }
+// console.log(hugs);
+// console.log(kisses);
+////////////////////////////////////////////////////
+// let count = 0;
+// window.onload = function () {
+//   let button = document.getElementById('clickme');
+//   button.onclick = handleClick;
+// };
+
+// function handleClick() {
+//   let message = 'You clicked me ';
+//   let div = document.getElementById('message');
+//   count++;
+//   div.innerHTML = message + count + ' times';
+// }
+////////////////////////////////////////////////////
+window.onload = function () {
+  let count = 0;
+  const message = 'You clicked me ';
+  const div = document.getElementById('message');
+
+  const button = document.getElementById('clickme');
+  button.onclick = function () {
+    count++;
+    div.innerHTML = message + count + ' times';
+  };
+};
