@@ -42,37 +42,44 @@
 //   fly(4);
 // }
 
-function makeCounter() {
-  let count = 0;
+// function makeCounter() {
+//   let count = 0;
 
-  let countMethod = {
-    increment: function () {
-      count = count + 1;
-      return count;
-    },
-  };
-  return countMethod.increment;
-}
+//   let countMethod = {
+//     increment: function () {
+//       count = count + 1;
+//       return count;
+//     },
+//   };
+//   return countMethod.increment;
+// }
 
-let doCount = makeCounter();
+// let doCount = makeCounter();
 
-console.log(doCount());
-console.log(doCount());
-console.log(doCount());
-console.log(doCount());
-console.log(doCount());
+// console.log(doCount());
+// console.log(doCount());
+// console.log(doCount());
+// console.log(doCount());
+// console.log(doCount());
 
 function makePassword(password) {
-  return function passwordGuess() {
+  return function guess(passwordGuess) {
     return passwordGuess === password;
   };
 }
 
-function multiN(n) {
-  return function (m) {
+let tryGuess = makePassword('secret');
+console.log("Guessing 'nope': " + tryGuess('nope'));
+console.log("Guessing 'secret': " + tryGuess('secret'));
+////////////////////////////////////
+function multN(n) {
+  return function multBy(m) {
     return m * n;
   };
 }
+let multBy3 = multN(3);
+console.log('Multiplying 2: ' + multBy3(2));
+console.log('Multiplying 3: ' + multBy3(3));
 ////////////////////////////////////
 function makeTimer(doneMessage, n) {
   setTimeout(function () {
