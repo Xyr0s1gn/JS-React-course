@@ -220,28 +220,73 @@
 // console.log(limoDog.name + ' is a ' + typeof limoDog);
 //////////////////////////////////////////////
 
-function dogCatcher(obj) {
-  this.obj = obj;
-  if (obj instanceof Dog) {
-    return obj;
-  }
-}
+// function dogCatcher(obj) {
+//   this.obj = obj;
+//   if (obj instanceof Dog) {
+//     return obj;
+//   }
+// }
 
-function Cat(name, breed, weight) {
-  this.name = name;
-  this.breed = breed;
-  this.weight = weight;
-}
+// function Cat(name, breed, weight) {
+//   this.name = name;
+//   this.breed = breed;
+//   this.weight = weight;
+// }
 
-let meow = new Cat('Meow', 'Siamese', 10);
-let whiskers = new Cat('Whiskers', 'Mixed', 12);
+// let meow = new Cat('Meow', 'Siamese', 10);
+// let whiskers = new Cat('Whiskers', 'Mixed', 12);
 
-let fido = { name: 'Fido', breed: 'Mixed', weight: 38 };
+// let fido = { name: 'Fido', breed: 'Mixed', weight: 38 };
 
+// function Dog(name, breed, weight) {
+//   this.name = name;
+//   this.breed = breed;
+//   this.weight = weight;
+//   this.bark = function () {
+//     if (this.weight > 25) {
+//       alert(this.name + ' says Woof!');
+//     } else {
+//       alert(this.name + ' says Yip!');
+//     }
+//   };
+// }
+// let fluffy = new Dog('Fluffy', 'Poodle', 30);
+// let spot = new Dog('Spot', 'Chihuahua', 10);
+// let dogs = [meow, whiskers, fido, fluffy, spot];
+
+// for (let i = 0; i < dogs.length; i++) {
+//   if (dogCatcher(dogs[i])) {
+//     console.log(dogs[i].name + ' is a dog!');
+//   }
+// }
+// fido.owner = 'Bob';
+// delete fido.weight;
+// fido.trust = function (person) {
+//   return person === 'Bob';
+// };
+// let notBite = fido.trust('Bob');
+///////////////////////////////////////////////////////
+// const now = new Date();
+// const dateString = now.toString();
+// const theYear = now.getFullYear();
+// const theDayOfWeek = now.getDay();
+// const birthday = new Date('May 19, 1986 12:30 PM');
+
+// console.log(birthday);
+
+// let emptyArray = new Array();
+// //
+// let n = getNumberOfWidgetsFromDatabase();
+// let widgets = new Array(n);
+// for (let i = 0; i < n; i++) {
+//   widgets[i] = getDatabaseRecord(i);
+// }
+/////////////////////////////////////////////////////////
 function Dog(name, breed, weight) {
   this.name = name;
   this.breed = breed;
   this.weight = weight;
+
   this.bark = function () {
     if (this.weight > 25) {
       alert(this.name + ' says Woof!');
@@ -250,12 +295,7 @@ function Dog(name, breed, weight) {
     }
   };
 }
-let fluffy = new Dog('Fluffy', 'Poodle', 30);
-let spot = new Dog('Spot', 'Chihuahua', 10);
-let dogs = [meow, whiskers, fido, fluffy, spot];
 
-for (let i = 0; i < dogs.length; i++) {
-  if (dogCatcher(dogs[i])) {
-    console.log(dogs[i].name + ' is a dog!');
-  }
-}
+let fido = new Dog('Fido', 'Mixe', 38);
+
+fido.bark();
