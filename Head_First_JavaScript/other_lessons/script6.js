@@ -98,98 +98,145 @@
 //     }
 //   },
 // };
+////////////////////////////////////////////////////////////
+// class Car {
+//   constructor(params) {
+//     this.make = params.make;
+//     this.model = params.model;
+//     this.year = params.year;
+//     this.color = params.color;
+//     this.passengers = params.passengers;
+//     this.convertible = params.convertible;
+//     this.mileage = params.mileage;
 
-class Car {
-  constructor(params) {
-    this.make = params.make;
-    this.model = params.model;
-    this.year = params.year;
-    this.color = params.color;
-    this.passengers = params.passengers;
-    this.convertible = params.convertible;
-    this.mileage = params.mileage;
+//     this.start = function () {
+//       this.started = true;
+//       console.log(this.model + ' engine started');
+//     };
+//     this.stop = function () {
+//       this.started = false;
+//       console.log(this.model + ' engine stopped');
+//     };
+//     this.drive = function () {
+//       if (this.started) {
+//         console.log(this.make + ' ' + this.model + ' goez zoom zoom');
+//       } else {
+//         console.log('Start the engine first');
+//       }
+//     };
+//   }
+// }
+// // First we describe params inside a one parameter
+// const chevyParams = {
+//   make: 'Chevy',
+//   model: 'Bel Air',
+//   year: 1957,
+//   color: 'red',
+//   passengers: 2,
+//   convertible: false,
+//   mileage: 1021,
+// };
+// // then, we drop a discribed parameter into a object creation function
+// const chevy = new Car(chevyParams);
+// //
+// const cadiParams = {
+//   make: 'GM',
+//   model: 'Cadillac',
+//   year: 1955,
+//   color: 'tan',
+//   passengers: 5,
+//   convertible: false,
+//   mileage: 12892,
+// };
+// const cadi = new Car(cadiParams);
+// //
+// const taxiParams = {
+//   make: 'Webville Motors',
+//   model: 'Taxi',
+//   year: 1955,
+//   color: 'yellow',
+//   passengers: 4,
+//   convertible: false,
+//   mileage: 281341,
+// };
+// const taxi = new Car(taxiParams);
+// //
+// const fiatParams = {
+//   make: 'Fiat',
+//   model: '500',
+//   year: 1957,
+//   color: 'blue',
+//   passengers: 2,
+//   convertible: false,
+//   mileage: 88000,
+// };
+// const fiat = new Car(fiatParams);
+// //
+// const testCarParams = {
+//   make: 'Webville Motors',
+//   model: 'Test Car',
+//   year: 2020,
+//   color: 'navy',
+//   passengers: 2,
+//   convertible: true,
+//   mileage: 21,
+// };
+// const testCar = new Car(testCarParams);
 
-    this.start = function () {
-      this.started = true;
-      console.log(this.model + ' engine started');
-    };
-    this.stop = function () {
-      this.started = false;
-      console.log(this.model + ' engine stopped');
-    };
-    this.drive = function () {
-      if (this.started) {
-        console.log(this.make + ' ' + this.model + ' goez zoom zoom');
-      } else {
-        console.log('Start the engine first');
-      }
-    };
+// const cars = [chevy, cadi, taxi, fiat, testCar];
+// for (let i = 0; i < cars.length; i++) {
+//   cars[i].start();
+//   cars[i].drive();
+//   cars[i].drive();
+//   cars[i].stop();
+// }
+
+// function Dog(name, breed, weight) {
+//   this.name = name;
+//   this.breed = breed;
+//   this.weight = weight;
+//   this.bark = function () {
+//     if (this.weight > 25) {
+//       alert(this.name + ' says Woof!');
+//     } else {
+//       alert(this.name + ' says Yip!');
+//     }
+//   };
+// }
+
+// const limoParams = {
+//   make: 'Webville Motors',
+//   model: 'limo',
+//   year: 1983,
+//   color: 'black',
+//   passengers: 12,
+//   convertible: true,
+//   mileage: 21120,
+// };
+// const limo = new Car(limoParams);
+// const limoDog = new Dog('Rhapsody In Blue', 'Poodle', 40);
+
+// console.log(limo.make + ' ' + limo.model + ' is a ' + typeof limo);
+// console.log(limoDog.name + ' is a ' + typeof limoDog);
+//////////////////////////////////////////////
+
+function dogCatcher(obj) {
+  this.obj = obj;
+  if (obj instanceof Dog) {
+    return obj;
   }
 }
-// First we describe params inside a one parameter
-const chevyParams = {
-  make: 'Chevy',
-  model: 'Bel Air',
-  year: 1957,
-  color: 'red',
-  passengers: 2,
-  convertible: false,
-  mileage: 1021,
-};
-// then, we drop a discribed parameter into a object creation function
-const chevy = new Car(chevyParams);
-//
-const cadiParams = {
-  make: 'GM',
-  model: 'Cadillac',
-  year: 1955,
-  color: 'tan',
-  passengers: 5,
-  convertible: false,
-  mileage: 12892,
-};
-const cadi = new Car(cadiParams);
-//
-const taxiParams = {
-  make: 'Webville Motors',
-  model: 'Taxi',
-  year: 1955,
-  color: 'yellow',
-  passengers: 4,
-  convertible: false,
-  mileage: 281341,
-};
-const taxi = new Car(taxiParams);
-//
-const fiatParams = {
-  make: 'Fiat',
-  model: '500',
-  year: 1957,
-  color: 'blue',
-  passengers: 2,
-  convertible: false,
-  mileage: 88000,
-};
-const fiat = new Car(fiatParams);
-//
-const testCarParams = {
-  make: 'Webville Motors',
-  model: 'Test Car',
-  year: 2020,
-  color: 'navy',
-  passengers: 2,
-  convertible: true,
-  mileage: 21,
-};
-const testCar = new Car(testCarParams);
 
-const cars = [chevy, cadi, taxi, fiat, testCar];
-for (let i = 0; i < cars.length; i++) {
-  cars[i].start();
-  cars[i].drive();
-  cars[i].drive();
-  cars[i].stop();
+function Cat(name, breed, weight) {
+  this.name = name;
+  this.breed = breed;
+  this.weight = weight;
 }
+
+let meow = new Cat('Meow', 'Siamese', 10);
+let whiskers = new Cat('Whiskers', 'Mixed', 12);
+
+let fido = { name: 'Fido', breed: 'Mixed', weight: 38 };
 
 function Dog(name, breed, weight) {
   this.name = name;
@@ -203,18 +250,12 @@ function Dog(name, breed, weight) {
     }
   };
 }
+let fluffy = new Dog('Fluffy', 'Poodle', 30);
+let spot = new Dog('Spot', 'Chihuahua', 10);
+let dogs = [meow, whiskers, fido, fluffy, spot];
 
-const limoParams = {
-  make: 'Webville Motors',
-  model: 'limo',
-  year: 1983,
-  color: 'black',
-  passengers: 12,
-  convertible: true,
-  mileage: 21120,
-};
-const limo = new Car(limoParams);
-const limoDog = new Dog('Rhapsody In Blue', 'Poodle', 40);
-
-console.log(limo.make + ' ' + limo.model + ' is a ' + typeof limo);
-console.log(limoDog.name + ' is a ' + typeof limoDog);
+for (let i = 0; i < dogs.length; i++) {
+  if (dogCatcher(dogs[i])) {
+    console.log(dogs[i].name + ' is a dog!');
+  }
+}
