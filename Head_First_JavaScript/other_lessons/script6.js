@@ -1,4 +1,4 @@
-// 'use strict';
+'use strict';
 // function Duck(type, canFly) {
 //   this.type = type;
 //   this.canFly = canFly;
@@ -282,20 +282,102 @@
 //   widgets[i] = getDatabaseRecord(i);
 // }
 /////////////////////////////////////////////////////////
-function Dog(name, breed, weight) {
-  this.name = name;
-  this.breed = breed;
-  this.weight = weight;
+// function Dog(name, breed, weight) {
+//   this.name = name;
+//   this.breed = breed;
+//   this.weight = weight;
+// }
 
-  this.bark = function () {
-    if (this.weight > 25) {
-      alert(this.name + ' says Woof!');
-    } else {
-      alert(this.name + ' says Yip!');
-    }
-  };
+// Dog.prototype.species = 'Canine';
+// Dog.prototype.bark = function () {
+//   if (this.weight > 25) {
+//     console.log(this.name + ' says Woof!');
+//   } else {
+//     console.log(this.name + ' says Yip!');
+//   }
+// };
+
+// Dog.prototype.run = function () {
+//   console.log('Run!');
+// };
+
+// Dog.prototype.wag = function () {
+//   console.log('Wag!');
+// };
+
+// const fido = new Dog('Fido', 'Mixed', 38);
+// const fluffy = new Dog('Fluffy', 'Poodle', 30);
+// const spot = new Dog('Spot', 'Chihuahua', 30);
+
+// spot.bark = function () {
+//   console.log(this.name + ' says WOOF!');
+// };
+
+// fido.bark();
+// fido.run();
+// fido.wag();
+
+// fluffy.bark();
+// fluffy.run();
+// fluffy.wag();
+
+// spot.bark();
+// spot.run();
+// spot.wag();
+///////////////////////////////////////////////////
+// Robots
+function Robot(name, year, owner) {
+  this.name = name;
+  this.year = year;
+  this.owner = owner;
 }
 
-let fido = new Dog('Fido', 'Mixe', 38);
+Robot.prototype.maker = 'ObjectsRus';
+Robot.prototype.speak = function () {
+  console.log('Warning! Warning!');
+};
 
-fido.bark();
+Robot.prototype.makeCoffee = function () {
+  console.log('Making coffee');
+};
+
+Robot.prototype.blinkLights = function () {
+  console.log('Blink blink!');
+};
+
+let robby = new Robot('Robby', 1956, 'Dr Morbius');
+let rosie = new Robot('Rosie', 1962, 'George Jetson');
+
+robby.onOffSwitch = true;
+robby.makeCoffee = function () {
+  console.log(this.name + ' is goes to coffee shop');
+};
+
+rosie.cleanHouse = function () {
+  console.log(this.name + " says 'cleaning the house in progress bip bip'");
+};
+
+console.log(
+  robby.name +
+    ' was made by ' +
+    robby.maker +
+    ' in ' +
+    robby.year +
+    ' and is owned by ' +
+    robby.owner
+);
+
+robby.makeCoffee();
+robby.blinkLights();
+
+console.log(
+  rosie.name +
+    ' was made by ' +
+    rosie.maker +
+    ' in ' +
+    rosie.year +
+    ' and is owned by ' +
+    rosie.owner
+);
+
+rosie.cleanHouse();
