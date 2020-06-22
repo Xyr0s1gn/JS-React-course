@@ -305,9 +305,21 @@ Dog.prototype.wag = function () {
   console.log('Wag!');
 };
 
+Dog.prototype.sitting = false;
+
+Dog.prototype.sit = function () {
+  if (this.sitting) {
+    console.log(this.name + ' is already sitting');
+  } else {
+    this.sitting = true;
+    console.log(this.name + ' is now sitting');
+  }
+};
+
 const fido = new Dog('Fido', 'Mixed', 38);
 const fluffy = new Dog('Fluffy', 'Poodle', 30);
 const spot = new Dog('Spot', 'Chihuahua', 30);
+const barnaby = new Dog('Barnaby', 'Basset Hound', 55);
 
 spot.bark = function () {
   console.log(this.name + ' says WOOF!');
@@ -316,6 +328,7 @@ spot.bark = function () {
 fido.bark();
 fido.run();
 fido.wag();
+fido.sit();
 
 // fluffy.bark();
 // fluffy.run();
@@ -325,59 +338,3 @@ fido.wag();
 // spot.run();
 // spot.wag();
 ///////////////////////////////////////////////////
-// Robots
-// function Robot(name, year, owner) {
-//   this.name = name;
-//   this.year = year;
-//   this.owner = owner;
-// }
-
-// Robot.prototype.maker = 'ObjectsRus';
-// Robot.prototype.speak = function () {
-//   console.log('Warning! Warning!');
-// };
-
-// Robot.prototype.makeCoffee = function () {
-//   console.log('Making coffee');
-// };
-
-// Robot.prototype.blinkLights = function () {
-//   console.log('Blink blink!');
-// };
-
-// let robby = new Robot('Robby', 1956, 'Dr Morbius');
-// let rosie = new Robot('Rosie', 1962, 'George Jetson');
-
-// robby.onOffSwitch = true;
-// robby.makeCoffee = function () {
-//   console.log(this.name + ' is goes to coffee shop');
-// };
-
-// rosie.cleanHouse = function () {
-//   console.log(this.name + " says 'cleaning the house in progress bip bip'");
-// };
-
-// console.log(
-//   robby.name +
-//     ' was made by ' +
-//     robby.maker +
-//     ' in ' +
-//     robby.year +
-//     ' and is owned by ' +
-//     robby.owner
-// );
-
-// robby.makeCoffee();
-// robby.blinkLights();
-
-// console.log(
-//   rosie.name +
-//     ' was made by ' +
-//     rosie.maker +
-//     ' in ' +
-//     rosie.year +
-//     ' and is owned by ' +
-//     rosie.owner
-// );
-
-// rosie.cleanHouse();
