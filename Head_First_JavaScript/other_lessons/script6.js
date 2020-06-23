@@ -287,6 +287,27 @@ function Dog(name, breed, weight) {
   this.breed = breed;
   this.weight = weight;
 }
+function ShowDog(name, breed, weight, handler) {
+  this.name = name;
+  this.breed = breed;
+  this.weight = weight;
+  this.handler = handler;
+}
+ShowDog.prototype = new Dog();
+
+ShowDog.prototype.league = 'Webville';
+ShowDog.prototype.stack = function () {
+  console.log('Stack');
+};
+ShowDog.prototype.bait = function () {
+  console.log('Bait');
+};
+ShowDog.prototype.gait = function () {
+  console.log(kind + 'ing');
+};
+ShowDog.prototype.groom = function () {
+  console.log('Groom');
+};
 
 Dog.prototype.species = 'Canine';
 Dog.prototype.bark = function () {
@@ -320,15 +341,24 @@ const fido = new Dog('Fido', 'Mixed', 38);
 const fluffy = new Dog('Fluffy', 'Poodle', 30);
 const spot = new Dog('Spot', 'Chihuahua', 30);
 const barnaby = new Dog('Barnaby', 'Basset Hound', 55);
+const scotty = new ShowDog('Scotty', 'Scottish Terrier', 15, 'Cookie');
+const stompy = new ShowDog('Stompy', 'Spaniel', 21, 'Terry');
 
 spot.bark = function () {
   console.log(this.name + ' says WOOF!');
 };
 
 fido.bark();
-fido.run();
-fido.wag();
-fido.sit();
+
+scotty.stack();
+scotty.bark();
+console.log(scotty.league + ' league');
+console.log('Scotty handler is ' + scotty.handler);
+console.log('===========================================');
+stompy.stack();
+stompy.bark();
+console.log(stompy.league + ' league');
+console.log('Stompy handler is ' + stompy.handler);
 
 // fluffy.bark();
 // fluffy.run();

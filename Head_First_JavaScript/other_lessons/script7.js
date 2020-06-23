@@ -22,7 +22,21 @@ function Robot(name, year, owner) {
   this.owner = owner;
 }
 
+function SpaceRobot(name, year, owner, homePlanet) {
+  this.name = name;
+  this.year = year;
+  this.owner = owner;
+  this.homePlanet = homePlanet;
+}
 // const game = new Game();
+
+SpaceRobot.prototype = new Robot();
+SpaceRobot.prototype.speak = function () {
+  alert(this.name + ' says Sir, If I may venture an opinion...');
+};
+SpaceRobot.prototype.pilot = function () {
+  alert(this.name + ' says Thrusters? Are they important?');
+};
 
 Robot.prototype.maker = 'ObjectsRUs';
 Robot.prototype.errorMessage = 'All systems go.';
@@ -32,29 +46,39 @@ Robot.prototype.reportError = function () {
 Robot.prototype.spillWater = function () {
   this.errorMessage = 'I appear to have a short circuit';
 };
-// Robot.prototype.speak = function () {
-//   console.log('Warning! Warning!');
-// };
+Robot.prototype.speak = function () {
+  console.log('Warning! Warning!');
+};
 
-// Robot.prototype.makeCoffee = function () {
-//   console.log('Making coffee');
-// };
+Robot.prototype.makeCoffee = function () {
+  console.log(this.name + ' is making coffee');
+};
 
-// Robot.prototype.blinkLights = function () {
-//   console.log('Blink blink!');
-// };
+Robot.prototype.blinkLights = function () {
+  console.log('Blink blink!');
+};
 
-let robby = new Robot('Robby', 1956, 'Dr Morbius');
-let rosie = new Robot('Rosie', 1962, 'George Jetson');
+const robby = new Robot('Robby', 1956, 'Dr Morbius');
+const rosie = new Robot('Rosie', 1962, 'George Jetson');
+const c3po = new SpaceRobot('C3PO', 1977, 'Luke Skywalker', 'Tatooine');
+const simon = new SpaceRobot('Simon', 2009, 'Carla Diana', 'Earth');
 
-rosie.reportError();
-robby.reportError();
-robby.spillWater();
-rosie.reportError();
-robby.reportError();
+// rosie.reportError();
+// robby.reportError();
+// robby.spillWater();
+// rosie.reportError();
+// robby.reportError();
 
-console.log(robby.hasOwnProperty('errorMessage')); //true
-console.log(rosie.hasOwnProperty('errorMessage')); //false
+simon.makeCoffee();
+simon.blinkLights();
+simon.speak();
+
+c3po.speak();
+c3po.pilot();
+console.log(c3po.name + ' was made by ' + c3po.maker);
+
+// console.log(robby.hasOwnProperty('errorMessage')); //true
+// console.log(rosie.hasOwnProperty('errorMessage')); //false
 // while (game.level < 42) {
 //   game.play();
 // }
