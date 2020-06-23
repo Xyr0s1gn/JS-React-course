@@ -288,13 +288,11 @@ function Dog(name, breed, weight) {
   this.weight = weight;
 }
 function ShowDog(name, breed, weight, handler) {
-  this.name = name;
-  this.breed = breed;
-  this.weight = weight;
+  Dog.call(this, name, breed, weight);
   this.handler = handler;
 }
 ShowDog.prototype = new Dog();
-
+ShowDog.prototype.constructor = ShowDog;
 ShowDog.prototype.league = 'Webville';
 ShowDog.prototype.stack = function () {
   console.log('Stack');
@@ -302,7 +300,7 @@ ShowDog.prototype.stack = function () {
 ShowDog.prototype.bait = function () {
   console.log('Bait');
 };
-ShowDog.prototype.gait = function () {
+ShowDog.prototype.gait = function (kind) {
   console.log(kind + 'ing');
 };
 ShowDog.prototype.groom = function () {
@@ -342,24 +340,47 @@ const fluffy = new Dog('Fluffy', 'Poodle', 30);
 const spot = new Dog('Spot', 'Chihuahua', 30);
 const barnaby = new Dog('Barnaby', 'Basset Hound', 55);
 const scotty = new ShowDog('Scotty', 'Scottish Terrier', 15, 'Cookie');
-const stompy = new ShowDog('Stompy', 'Spaniel', 21, 'Terry');
+const beatrice = new ShowDog('Beatrice', 'Pomeranian', 5, 'Hamilton');
 
 spot.bark = function () {
   console.log(this.name + ' says WOOF!');
 };
 
 fido.bark();
-
-scotty.stack();
+fluffy.bark();
+spot.bark();
 scotty.bark();
-console.log(scotty.league + ' league');
-console.log('Scotty handler is ' + scotty.handler);
-console.log('===========================================');
-stompy.stack();
-stompy.bark();
-console.log(stompy.league + ' league');
-console.log('Stompy handler is ' + stompy.handler);
+beatrice.bark();
+scotty.gait('Walk');
+beatrice.groom();
 
+// scotty.stack();
+// scotty.bark();
+// console.log(scotty.league + ' league');
+// console.log('Scotty handler is ' + scotty.handler);
+// console.log('===========================================');
+// stompy.stack();
+// stompy.bark();
+// console.log(stompy.league + ' league');
+// console.log('Stompy handler is ' + stompy.handler);
+// console.log('===========================================');
+// console.log('Instance checking');
+// if (fido instanceof Dog) {
+//   console.log('Fido is a Dog');
+// }
+// if (fido instanceof ShowDog) {
+//   console.log('Fido is a ShowDog');
+// }
+
+// if (scotty instanceof Dog) {
+//   console.log('scotty is a Dog');
+// }
+// if (scotty instanceof ShowDog) {
+//   console.log('scotty is a ShowDog');
+// }
+
+// console.log('Fido constructor is ' + fido.constructor);
+// console.log('Scotty constructor is ' + scotty.constructor);
 // fluffy.bark();
 // fluffy.run();
 // fluffy.wag();
