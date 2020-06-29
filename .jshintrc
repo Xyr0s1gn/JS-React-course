@@ -1,9 +1,11 @@
 {
   "camelcase": true,
   "indent": 2,
+  "latedef": true,
   "undef": true,
+  "newcap": true,
   "quotmark": false,
-  "maxlen": 80,
+  "maxlen": 100,
   "trailing": true,
   "curly": true,
   "strict": false,

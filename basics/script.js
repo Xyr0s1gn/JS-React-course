@@ -71,3 +71,13 @@ function writeYourGenres() {
   }
 }
 // writeYourGenres();
+
+function learnJS(lang, callback) {
+  console.log(`I am learning ${lang}`);
+  callback();
+}
+
+learnJS('JavaScript', function () {
+  console.log('This lesson is finished');
+  console.log(' Yep.');
+});
