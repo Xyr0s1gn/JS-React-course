@@ -86,11 +86,18 @@
 //   mixedArray = [...video, ...blogs, 'search', 'gameHub'];
 // console.log(mixedArray);
 
-function log(a, b, c) {
-  console.log(a);
-  console.log(b);
-  console.log(c);
-}
-const num = [11, 22, 42, 33];
+// function log(a, b, c) {
+//   console.log(a);
+//   console.log(b);
+//   console.log(c);
+// }
+// const num = [11, 22, 42, 33];
 
-log(...num);
+// log(...num);
+
+const soldier = {
+  health: 400,
+  armor: 100,
+};
+// Object.setPrototypeOf(child, parent);
+const john = Object.create(soldier);
