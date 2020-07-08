@@ -1,0 +1,23 @@
+{
+  "name": "js-react-course",
+  "version": "1.0.0",
+  "description": "grinding skill",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xyr0s1gn/JS-React-course.git"
+  },
+  "keywords": [
+    "learning",
+    "practice"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xyr0s1gn/JS-React-course/issues"
+  },
+  "homepage": "https://github.com/Xyr0s1gn/JS-React-course#readme"
+}
