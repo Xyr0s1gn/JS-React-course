@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/Xyr0s1gn/JS-React-course/issues"
   },
-  "homepage": "https://github.com/Xyr0s1gn/JS-React-course#readme"
+  "homepage": "https://github.com/Xyr0s1gn/JS-React-course#readme",
+  "devDependencies": {
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-sort-imports-es6-autofix": "^0.5.0"
+  }
 }
