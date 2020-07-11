@@ -1,3 +1,5 @@
+/* eslint-disable no-plusplus */
+/* eslint-disable no-restricted-globals */
 const personalMovieDB = {
   count: 0,
   movies: {},
@@ -6,20 +8,24 @@ const personalMovieDB = {
   privat: false,
   start() {
     personalMovieDB.count = +prompt('Сколько фильмов вы уже посмотрели?', 0);
-    while (personalMovieDB.count == '' || personalMovieDB.count == null || isNaN(personalMovieDB.count)) {
+    while (
+      personalMovieDB.count === '' ||
+      personalMovieDB.count == null ||
+      isNaN(personalMovieDB.count)
+    ) {
       personalMovieDB.count = +prompt('Сколько фильмов вы уже посмотрели?', 0);
     }
   },
   rememberMyFilms() {
     for (let i = 0; i < 2; i++) {
-      let lastViewed = prompt('Один из последних просмотренных фильмов?', '');
-      let lastViewedRating = +prompt('На сколько оцените его?', 0);
+      const lastViewed = prompt('Один из последних просмотренных фильмов?', '');
+      const lastViewedRating = +prompt('На сколько оцените его?', 0);
 
       if (
         lastViewed != null &&
         lastViewedRating != null &&
-        lastViewed != '' &&
-        lastViewedRating != '' &&
+        lastViewed !== '' &&
+        lastViewedRating !== '' &&
         lastViewed != null &&
         lastViewedRating != null &&
         lastViewed.length < 50
@@ -28,6 +34,7 @@ const personalMovieDB = {
         console.log('Done');
       } else {
         console.log('Error!');
+
         i--;
       }
     }
@@ -57,7 +64,7 @@ const personalMovieDB = {
   },
   writeYourGenres() {
     for (let i = 1; i <= 3; i++) {
-      let genre = prompt(`Ваш любимый жанр под номером ${i}`);
+      const genre = prompt(`Ваш любимый жанр под номером ${i}`);
       if (genre === '' || genre == null) {
         console.log('Enter incorrect. Try again');
         i--;
@@ -68,5 +75,5 @@ const personalMovieDB = {
     personalMovieDB.genres.forEach((item, i) => {
       console.log(`Любимый жанр #${i + 1} - это ${item}`);
     });
-  }
+  },
 };
