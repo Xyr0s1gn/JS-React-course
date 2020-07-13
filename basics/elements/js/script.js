@@ -1,4 +1,4 @@
-'use strict';
+/* eslint-disable no-plusplus */
 // <div id="box"></div>
 const box = document.getElementById('box');
 
@@ -13,7 +13,7 @@ console.log(circles);
 // select all times with any described selector bellow
 // class="heart", id=heart etc
 const hearts = document.querySelectorAll('.heart');
-hearts.forEach((item) => {
+hearts.forEach(item => {
   console.log(item);
 });
 
@@ -31,6 +31,17 @@ for (let i = 0; i < hearts.length; i++) {
   hearts[i].style.backgroundColor = 'gray';
 }
 
-hearts.forEach((item) => {
+hearts.forEach(item => {
   item.style.backgroundColor = 'darkgray';
 });
+
+const div = document.createElement('div');
+div.classList.add('black');
+// document.body.append(div);
+const wrapper = document.querySelector('.wrapper');
+// wrapper.append(div); // adding element into end
+// wrapper.prepend(div); // adding element into start
+// hearts[1].before(div);
+hearts[1].after(div);
+
+circles[0].remove();

@@ -1,5 +1,6 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable no-restricted-globals */
+
 const personalMovieDB = {
   count: 0,
   movies: {},

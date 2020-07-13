@@ -1,4 +1,3 @@
-'use strict';
 // const sampleObject = {
 //   name: 'test',
 //   width: 20,
