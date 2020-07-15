@@ -42,6 +42,8 @@ const wrapper = document.querySelector('.wrapper');
 // wrapper.append(div); // adding element into end
 // wrapper.prepend(div); // adding element into start
 // hearts[1].before(div);
-hearts[1].after(div);
+// hearts[1].after(div);
 
-circles[0].remove();
+// circles[0].remove();
+
+hearts[1].replaceWith(circles[1]);
