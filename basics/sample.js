@@ -94,9 +94,14 @@
 
 // log(...num);
 
-const soldier = {
-  health: 400,
-  armor: 100,
-};
+// const soldier = {
+//   health: 400,
+//   armor: 100,
+// };
 // Object.setPrototypeOf(child, parent);
-const john = Object.create(soldier);
+// const john = Object.create(soldier);
+// const btn = document.querySelector('button');
+
+// btn.onClick = function() {
+//   alert('Click');
+// };
