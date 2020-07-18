@@ -1,12 +1,20 @@
-const btn = document.querySelector('button');
-
-// btn.onclick = function() {
-//   alert('Click');
-// };
+const btns = document.querySelectorAll('button');
+const overlay = document.querySelector('.overlay');
+const link = document.querySelector('a');
 
 const deleteElement = e => {
-  console.log(e.target);
+  console.log(e.currentTarget);
+  console.log(e.type);
 };
 
-btn.addEventListener('click', deleteElement);
-btn.removeEventListener('click', deleteElement);
+btns.forEach(btn => {
+  btn.addEventListener('click', deleteElement);
+});
+
+// btn.addEventListener('click', deleteElement);
+// overlay.addEventListener('click', deleteElement);
+
+link.addEventListener('click', event => {
+  event.preventDefault();
+  console.log(event.target);
+});
