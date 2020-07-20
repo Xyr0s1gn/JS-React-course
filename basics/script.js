@@ -17,6 +17,7 @@ const personalMovieDB = {
       personalMovieDB.count = +prompt('Сколько фильмов вы уже посмотрели?', 0);
     }
   },
+
   rememberMyFilms() {
     for (let i = 0; i < 2; i++) {
       const lastViewed = prompt('Один из последних просмотренных фильмов?', '');
