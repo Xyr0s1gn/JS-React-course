@@ -12,9 +12,9 @@
 
 // console.log(document.body.firstElementChild);
 
-for (const node of document.body.childNodes) {
-  if (node.nodeName == '#text') {
-    continue;
-  }
-  console.log(node);
-}
+// for (const node of document.body.childNodes) {
+//   if (node.nodeName == '#text') {
+//     continue;
+//   }
+//   console.log(node);
+// }
