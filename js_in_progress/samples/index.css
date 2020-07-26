@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  width: 80px;
+  height: 36px;
+  padding: 20px;
+  margin: 0 20px;
+}
+
+.btn_block {
+  width: 100%;
+  background-color: gray;
+  border: 0;
+  padding: 20px;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.some {
+  background-color: sandybrown;
+}
+
+.red {
+  background-color: red;
+}
