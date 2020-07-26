@@ -10,15 +10,15 @@ button {
   margin: 0 20px;
 }
 
-.btn_block {
+.btn-block {
   width: 100%;
   background-color: gray;
   border: 0;
   padding: 20px;
 }
 
-.blue {
-  background-color: blue;
+.cyan {
+  background-color: cyan;
 }
 
 .some {
