@@ -31,3 +31,23 @@
 //   console.log('Hello');
 //   id = setTimeout(log, 500);
 // }, 500);
+
+// const now = new Date();
+// console.log(now.getFullYear());
+// console.log(now.getMonth());
+// console.log(now.getDate());
+
+// const start = new Date();
+// for (let i = 0; i < 100000; i++) {
+//   const some = i ** 3;
+// }
+// const end = new Date();
+
+// alert(`Working time - ${end - start} ms`);
+
+// const box = document.querySelector('.box');
+
+// const width = box.offsetWidth;
+// const height = box.offsetHeight;
+
+// console.log(width, height);
