@@ -146,4 +146,12 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   window.addEventListener('scroll', showModalByScroll);
+
+  // //////////////////////////////////
+  // Using classes for site cards
+  // //////////////////////////////////
+
+  class MenuCard {
+    constructor() {}
+  }
 });
