@@ -39,3 +39,26 @@
 // const timerId = setTimeout(logger, 2000);
 
 // clearInterval(timerId);
+
+console.log('Requesting data...');
+
+const req = new Promise(function(resolve, reject) {
+  setTimeout(() => {
+    console.log('Data almost ready...');
+
+    const product = {
+      name: 'TV',
+      price: 5000,
+    };
+
+    resolve(product);
+  }, 2000);
+});
+
+req.then(() => {
+  // console.log('Data received...');
+  setTimeout(() => {
+    product.status = 'order';
+    console.log(product);
+  }, 2000);
+});
