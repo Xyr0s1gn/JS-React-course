@@ -98,15 +98,15 @@
 
 // /////////// Massive sort methods
 
-const telescopeNames = [
-  'Celestron',
-  'Meade',
-  'Sky-Watcher',
-  'Takahashi',
-  'Coronado',
-  'Bresser',
-  'Orion',
-];
+// const telescopeNames = [
+//   'Celestron',
+//   'Meade',
+//   'Sky-Watcher',
+//   'Takahashi',
+//   'Coronado',
+//   'Bresser',
+//   'Orion',
+// ];
 
 // ///////// filter
 // const shortNames = names.filter(function(name) {
@@ -150,3 +150,8 @@ const telescopeNames = [
 //   .map(item => item[0]);
 
 // console.log(newArr);
+localStorage.setItem('number', 5);
+
+localStorage.clear();
+console.log(localStorage.getItem('number'));
+localStorage.removeItem('number');
