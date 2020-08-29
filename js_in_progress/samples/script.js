@@ -150,8 +150,29 @@
 //   .map(item => item[0]);
 
 // console.log(newArr);
-localStorage.setItem('number', 5);
+// localStorage.setItem('number', 5);
 
-localStorage.clear();
-console.log(localStorage.getItem('number'));
-localStorage.removeItem('number');
+// localStorage.clear();
+// console.log(localStorage.getItem('number'));
+// localStorage.removeItem('number');
+
+// new RegExp('pattern', 'flags');
+// /pattern/f
+const ans = prompt('Enter your digit');
+
+const reg = /\d/;
+console.log(ans.match(reg));
+// const pass = prompt('Enter your password');
+
+// flags
+// g - global
+// i - both case (upper and lower)
+// m -
+
+// classes
+// \d - digits
+// \w - all words and letters
+// \s symbols
+// console.log(ans.search(reg));
+
+// console.log(pass.replace(/./g, '*'));
