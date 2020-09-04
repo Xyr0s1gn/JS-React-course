@@ -498,11 +498,13 @@ window.addEventListener('DOMContentLoaded', () => {
       return;
     }
     if (sex === 'female') {
-      result.textContent =
-        (447.6 + 9.2 * weight + 3.1 * height - 4.3 * age) * ratio;
+      result.textContent = Math.round(
+        (447.6 + 9.2 * weight + 3.1 * height - 4.3 * age) * ratio
+      );
     } else {
-      result.textContent =
-        (88.36 + 13.4 * weight + 4.8 * height - 5.7 * age) * ratio;
+      result.textContent = Math.round(
+        (88.36 + 13.4 * weight + 4.8 * height - 5.7 * age) * ratio
+      );
     }
   }
 
