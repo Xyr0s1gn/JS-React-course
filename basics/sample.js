@@ -105,3 +105,5 @@
 // btn.onClick = function() {
 //   alert('Click');
 // };
+
+const telescope = {};
