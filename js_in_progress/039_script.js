@@ -1,23 +1,23 @@
-// const btn = document.querySelector('.btn');
-// let timerId;
-// const i = 0;
+const btn = document.querySelector('.btn');
+let timerId;
+const i = 0;
 
-// function myAnimation() {
-//   const elem = document.querySelector('.box');
-//   let pos = 0;
+function myAnimation() {
+    const elem = document.querySelector('.box');
+    let pos = 0;
 
-//   const id = setInterval(frame, 10);
-//   function frame() {
-//     if (pos == 300) {
-//       clearInterval(id);
-//     } else {
-//       pos++;
-//       elem.style.top = `${pos}px`;
-//       elem.style.left = `${pos}px`;
-//     }
-//   }
-// }
-// btn.addEventListener('click', myAnimation);
+    const id = setInterval(frame, 10);
+    function frame() {
+        if (pos == 300) {
+            clearInterval(id);
+        } else {
+            pos++;
+            elem.style.top = `${pos}px`;
+            elem.style.left = `${pos}px`;
+        }
+    }
+}
+btn.addEventListener('click', myAnimation);
 
 // function logger() {
 //   if (i === 3) {
@@ -52,9 +52,9 @@
 
 // console.log(width, height);
 
-// ///////////////////////////////////////////
-// Constructors
-// ///////////////////////////////////////////
+// // /////////////////////////////////////////
+// Constructors;
+// // /////////////////////////////////////////
 // function User(name, id) {
 //   this.name = name;
 //   this.id = id;
@@ -83,7 +83,7 @@
 // };
 
 // alex.exit();
-// ///////////////////////////////////////////
+// // /////////////////////////////////////////
 // function showThis(a, b) {
 //   console.log(this);
 //   function sum() {
@@ -124,12 +124,12 @@
 // console.log(double(3));
 // console.log(double(13));
 
-// const btn = document.querySelector('button');
-// btn.addEventListener('click', function() {
+// const btn2 = document.querySelector('button');
+// btn2.addEventListener('click', function() {
 //   this.style.backgroundColor = 'brown';
 // });
 
-// const obj = {
+// const obj2 = {
 //   num: 5,
 //   sayNumber() {
 //     const say = () => {
@@ -139,9 +139,9 @@
 //   },
 // };
 
-// obj.sayNumber();
+// obj2.sayNumber();
 
-// const double = a => a * 2;
+// const double2 = a => a * 2;
 
 // class Rectangle {
 //   constructor(height, width) {
@@ -180,16 +180,16 @@
 //   console.log(`${a}, ${b}`, rest);
 // };
 
-// log(
-//   'Celestron',
-//   'Sky-Watcher',
-//   'Meade',
-//   'Levenhuk',
-//   'Coronado',
-//   'Bresser',
-//   'Takahashi',
-//   'Orion'
-// );
+log(
+    'Celestron',
+    'Sky-Watcher',
+    'Meade',
+    'Levenhuk',
+    'Coronado',
+    'Bresser',
+    'Takahashi',
+    'Orion'
+);
 
 // function calcOrDouble(number = 1, basis = 1) {
 //   console.log(number * basis);

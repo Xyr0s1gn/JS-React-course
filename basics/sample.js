@@ -106,4 +106,27 @@
 //   alert('Click');
 // };
 
-const telescope = {};
+// const telescope = {
+//   names: [
+//     'Meade',
+//     'Sky-Watcher',
+//     'Celestron',
+//     'Coronado',
+//     'Takahashi',
+//     'Orion',
+//     'Delta Optical-GSO',
+//     'Lunt',
+//   ],
+
+//   get telescopeNames() {
+//     return this.names;
+//   },
+
+//   set telescopeNames(list) {
+//     this.names = list;
+//   },
+// };
+
+// console.log(
+//   (telescope.telescopeNames[0] = 'This TELESCOPE_NAME has been wiped by setter')
+// );
